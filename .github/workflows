@@ -1,1 +1,17 @@
-
+name: Auto BTC/ETH Posts
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Каждые 6 часов
+  workflow_dispatch:  # Manual trigger
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with: { python-version: '3.12' }
+    - run: pip install requests PyGithub
+    - run: python generate_post.py  # Ваш скрипт
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Auto: BTC/ETH анализ"
