@@ -1,0 +1,32 @@
+.posts-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-preview {
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-preview h3 {
+  margin-top: 0;
+  color: #0366d6;
+}
+
+.post-preview h3 a {
+  text-decoration: none;
+}
+
+.read-more {
+  color: #ff6b35;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
